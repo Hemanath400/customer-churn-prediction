@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/HEMANATH/Desktop/churn_new_2/mlruns/1/models/m-893eaf4b6e684f81b381559ed4264b01/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.0
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.8.0
+    skops_trusted_types: null
+mlflow_version: 3.10.1
+model_id: m-893eaf4b6e684f81b381559ed4264b01
+model_size_bytes: 635883
+model_uuid: m-893eaf4b6e684f81b381559ed4264b01
+prompts: null
+run_id: b8856c65796743fd93fe222548db730b
+utc_time_created: '2026-03-06 06:43:37.109517'
