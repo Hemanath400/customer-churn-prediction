@@ -19,16 +19,23 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        # FIXED: Look in root folder, not deployment/
+        # Force clean numpy install
+        pip uninstall -y numpy || true
+        pip install numpy==1.24.3
         pip install -r requirements.txt
         pip install pytest pytest-cov flake8
+        # Verify versions
+        python -c "import numpy; print(f'✅ NumPy version: {numpy.__version__}')"
+        python -c "import sklearn; print(f'✅ Scikit-learn version: {sklearn.__version__}')"
     
-    - name: Debug - Show files
+    - name: Debug - Show file structure
       run: |
+        echo "=== Current Directory ==="
+        pwd
         echo "=== Files in root ==="
         ls -la
-        echo "\n=== requirements.txt exists? ==="
-        cat requirements.txt || echo "requirements.txt not found!"
+        echo "=== Models folder ==="
+        ls -la models/ || echo "No models folder"
     
     - name: Run tests
       run: |
