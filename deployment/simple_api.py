@@ -1,5 +1,5 @@
 # 📁 CHURN_NEW_2/deployment/simple_api.py
-# WORKS WITH YOUR EXACT FILE STRUCTURE!
+# FIXED - NO CONFLICTS!
 
 from fastapi import FastAPI
 from pydantic import BaseModel
