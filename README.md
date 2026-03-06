@@ -11,4 +11,4 @@ Deployment: Docker-ready
 Tech Stack
 - Python, scikit-learn, Pandas,tensorflow
 - FastAPI, Streamlit
-- Docker, Git
+- Docker ready , Git
